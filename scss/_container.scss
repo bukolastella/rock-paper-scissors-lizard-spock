@@ -88,7 +88,7 @@
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .score_box {
     width: 100%;
   }
@@ -96,5 +96,8 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 5px;
+  }
+  .modal {
+    width: 99%;
   }
 }

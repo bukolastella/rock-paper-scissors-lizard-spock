@@ -149,7 +149,7 @@ section {
   display: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .score_box {
     width: 100%;
   }
@@ -158,6 +158,9 @@ section {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     bottom: 5px;
+  }
+  .modal {
+    width: 99%;
   }
 }
 
@@ -247,7 +250,7 @@ section {
           box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #dd405d;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .first {
     width: 300px;
     height: 300px;
@@ -363,8 +366,9 @@ section {
   background-color: rgba(24, 30, 58, 0.575);
 }
 
-@media (max-width: 375px) {
-  .second_icons {
+@media (max-width: 700px) {
+  .second_icons,
+  .empty {
     width: 150px;
     height: 150px;
   }

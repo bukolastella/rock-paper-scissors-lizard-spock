@@ -114,15 +114,11 @@ first.addEventListener("click", function (e) {
     console.log(score);
     scoreNo.textContent = score;
     localStorage.setItem("score", JSON.stringify(score));
-  }, 2000);
+  }, 1000);
 });
 
 middleBtn.addEventListener("click", function () {
   location.reload();
-
-  //   middle.style.display = "none";
-  //   second.style.display = "none";
-  //   first.style.display = "block";
 });
 function getLocalStorage() {
   const local = JSON.parse(localStorage.getItem("score"));
