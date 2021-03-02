@@ -1,0 +1,75 @@
+.first {
+  background-image: url("../images/bg-pentagon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 350px;
+  height: 350px;
+  position: relative;
+  //   display: none;
+  div {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+.scissors {
+  position: absolute;
+  top: -40px;
+  left: 120px;
+}
+.scissors_color {
+  border: 15px hsl(39, 89%, 49%) solid;
+  box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #c06d21;
+}
+.paper {
+  position: absolute;
+  right: -50px;
+  top: 100px;
+}
+.paper_color {
+  border: 15px hsl(230, 89%, 62%) solid;
+  box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 hsl(230, 89%, 65%);
+}
+.spock {
+  position: absolute;
+  left: -50px;
+  top: 100px;
+}
+.spock_color {
+  border: 15px hsl(189, 59%, 53%) solid;
+  box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 hsl(189, 58%, 57%);
+}
+.lizard {
+  position: absolute;
+  bottom: -50px;
+}
+.lizard_color {
+  border: 15px hsl(261, 73%, 60%) solid;
+  box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 hsl(261, 72%, 63%);
+}
+.rock {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+.rock_color {
+  border: 15px hsl(349, 71%, 52%) solid;
+  box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 hsl(349, 70%, 56%);
+}
+
+@media (max-width: 375px) {
+  .first {
+    width: 300px;
+    height: 300px;
+    div {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

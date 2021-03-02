@@ -1,0 +1,397 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(#1f3756, #141539);
+  padding-top: 3rem;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5rem;
+}
+
+.score_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  width: 50%;
+  border: 2px solid #606e85;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.score_box .box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 2.5rem;
+  background-color: white;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.score_box div span {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #2a46c0;
+}
+
+.score_box .score_no {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #3b4363;
+}
+
+.rule-btn {
+  text-transform: uppercase;
+  padding: 1rem 4rem;
+  border: 2px solid #606e85;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+  outline: none;
+}
+
+.modal {
+  width: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.modal h2 {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .score_box {
+    width: 100%;
+  }
+  .rule-btn {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 5px;
+  }
+}
+
+.first {
+  background-image: url("../images/bg-pentagon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+
+.first div {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  cursor: pointer;
+}
+
+.scissors {
+  position: absolute;
+  top: -40px;
+  left: 120px;
+}
+
+.scissors_color {
+  border: 15px #ec9e0e solid;
+  -webkit-box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #c06d21;
+          box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #c06d21;
+}
+
+.paper {
+  position: absolute;
+  right: -50px;
+  top: 100px;
+}
+
+.paper_color {
+  border: 15px #4865f4 solid;
+  -webkit-box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #5671f5;
+          box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #5671f5;
+}
+
+.spock {
+  position: absolute;
+  left: -50px;
+  top: 100px;
+}
+
+.spock_color {
+  border: 15px #40b9ce solid;
+  -webkit-box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #52bed1;
+          box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #52bed1;
+}
+
+.lizard {
+  position: absolute;
+  bottom: -50px;
+}
+
+.lizard_color {
+  border: 15px #834fe3 solid;
+  -webkit-box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #8c5de5;
+          box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #8c5de5;
+}
+
+.rock {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+
+.rock_color {
+  border: 15px #dc2e4e solid;
+  -webkit-box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #dd405d;
+          box-shadow: inset 0 6px 1px #cccccc, 0 6px 0 #dd405d;
+}
+
+@media (max-width: 375px) {
+  .first {
+    width: 300px;
+    height: 300px;
+  }
+  .first div {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 850px;
+  display: none;
+}
+
+.you,
+.house {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 400px;
+}
+
+.you h4,
+.house h4 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+.second_icons {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  cursor: pointer;
+  border-width: 20px;
+}
+
+.second_icons img {
+  width: 50%;
+}
+
+.middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 200px;
+  display: none;
+  margin: 0 4rem;
+}
+
+.middle h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+.middle button {
+  color: #3b4363;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.empty {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(24, 30, 58, 0.575);
+}
+
+@media (max-width: 375px) {
+  .second_icons {
+    width: 150px;
+    height: 150px;
+  }
+  .you,
+  .house {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: center;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
+  .you h4,
+  .house h4 {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  .middle {
+    position: absolute;
+    top: 430px;
+    height: 120px;
+  }
+  .middle h2 {
+    font-size: 3rem;
+  }
+}

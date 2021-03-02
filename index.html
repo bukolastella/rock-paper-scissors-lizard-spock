@@ -11,8 +11,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/main.css" />
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
   </head>
   <body>
@@ -20,38 +24,57 @@
       <div>
         <img src="images/logo-bonus.svg" alt="logo" />
       </div>
-      <div>
+      <div class="box">
         <span>score </span>
-        <span>12</span>
+        <span class="score_no">0</span>
       </div>
     </div>
-    <section></section>
+    <section>
       <div class="first">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="scissors scissors_color" data-name="scissors">
+          <img src="images/icon-scissors.svg" alt="scissors icon" />
+        </div>
+        <div class="paper paper_color" data-name="paper">
+          <img src="images/icon-paper.svg" alt="paper icon" />
+        </div>
+        <div class="spock spock_color" data-name="spock">
+          <img src="images/icon-spock.svg" alt="spock icon" />
+        </div>
+        <div class="lizard lizard_color" data-name="lizard">
+          <img src="images/icon-lizard.svg" alt="lizard icon" />
+        </div>
+        <div class="rock rock_color" data-name="rock">
+          <img src="images/icon-rock.svg" alt="rock icon" />
+        </div>
       </div>
 
       <div class="second">
-        <div>
+        <div class="you">
           <h4>you picked</h4>
-          <div></div>
+          <div class="second_icons your_icon scissors_color">
+            <img src="images/icon-scissors.svg" alt="scissors icon" />
+          </div>
         </div>
-        <div>
-          <span>you lose</span>
-          <button>play again</button>
+        <div class="middle">
+          <h2 class="middle_head">you lose</h2>
+          <button class="middle_button">play again</button>
         </div>
-        <div>
+        <div class="house">
           <h4>the house picked</h4>
-          <div></div>
+          <!-- <div class="second_icons computer_icon spock_color">
+            <img src="images/icon-spock.svg" alt="spock icon" />
+          </div> -->
+          <div class="empty"></div>
         </div>
       </div>
-      <button>rules</button>
-      <div class="modal"><img src="" alt=""></div>
-      <div class="overlay"></div>
     </section>
-    
+    <button class="rule-btn">rules</button>
+    <div class="modal hidden">
+      <h2>rules</h2>
+      <img src="images/image-rules-bonus.svg" alt="rule image" />
+      <img src="images/icon-close.svg" alt="close icon" class="close" />
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
   </body>
 </html>
