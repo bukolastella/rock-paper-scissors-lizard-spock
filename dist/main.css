@@ -259,6 +259,12 @@ section {
     width: 100px;
     height: 100px;
   }
+  .spock {
+    left: -30px;
+  }
+  .paper {
+    right: -30px;
+  }
 }
 
 .second {
